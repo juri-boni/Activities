@@ -1,0 +1,11 @@
+.main-nav {
+  height: 8rem;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  .admin-container {
+    margin-right: 2rem;
+  }
+}
