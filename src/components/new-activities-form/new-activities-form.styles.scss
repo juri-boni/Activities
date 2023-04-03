@@ -1,4 +1,9 @@
 .new-activities-form-container {
   display: flex;
   background-color: #cfd8e0;
+
+  .new-activities-buttons-container {
+    display: flex;
+    gap: 1rem;
+  }
 }

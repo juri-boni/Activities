@@ -1,4 +1,5 @@
 import FormInput from "../form-input/form-input.component";
+import Button from "../button/button.component";
 import "./new-activities-form.styles.scss";
 
 const NewActivitiesForm = () => {
@@ -8,6 +9,10 @@ const NewActivitiesForm = () => {
       <div className="new-activities-form-container">
         <FormInput label="Descrizione"></FormInput>
         <FormInput label="Operatore"></FormInput>
+        <div className="new-activities-buttons-container">
+          <Button>Annulla</Button>
+          <Button buttonType="save">Salva</Button>
+        </div>
       </div>
     </div>
   );

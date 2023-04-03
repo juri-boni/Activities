@@ -1,0 +1,35 @@
+.button-container {
+  width: 15rem;
+  height: 4rem;
+  padding: 0 3.5rem 0 3.5rem;
+  font-size: 1.2rem;
+  background-color: #2a3948;
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: black;
+    color: white;
+    border: none;
+  }
+
+  &.save {
+    background-color: #4eadc1;
+
+    &:hover {
+      background-color: #be0010;
+      color: white;
+      border: none;
+    }
+  }
+
+  &.small {
+    width: 9rem;
+    height: 2.6rem;
+  }
+}
