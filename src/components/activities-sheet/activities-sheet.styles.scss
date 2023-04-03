@@ -1,8 +1,11 @@
 .sheet-container {
-  background-color: #fff;
   margin-bottom: 2rem;
 
   .sheet-description {
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
     background-color: #be0010;
+    height: 4rem;
   }
 }

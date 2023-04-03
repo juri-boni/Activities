@@ -1,0 +1,15 @@
+.sheet-element {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+  padding: 0 2rem;
+
+  &.transparent {
+    background-color: transparent;
+  }
+
+  &.normal {
+    background-color: #fff;
+  }
+}
