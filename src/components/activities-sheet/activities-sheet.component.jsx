@@ -1,5 +1,5 @@
 import FormInput from "../form-input/form-input.component";
-import Button from "../button/button.component";
+import ActivitiesSheetElement from "../activities-sheet-element/activities-sheet-element.component";
 import "./activities-sheet.styles.scss";
 
 const ActivitiesSheet = () => {
@@ -10,22 +10,9 @@ const ActivitiesSheet = () => {
         <span>Attività</span>
         <span>Operatore</span>
       </div>
-      <div className="sheet-element">
-        <span>report</span>
-        <span>Mario Rossi</span>
-
-        <Button buttonType="small">svolgi</Button>
-      </div>
-      <div className="sheet-element">
-        <span>report</span>
-        <span>Mario Rossi</span>
-        <Button buttonType="small">svolgi</Button>
-      </div>
-      <div className="sheet-element">
-        <span>report</span>
-        <span>Mario Rossi</span>
-        <Button buttonType="small">svolgi</Button>
-      </div>
+      <ActivitiesSheetElement />
+      <ActivitiesSheetElement />
+      <ActivitiesSheetElement />
     </div>
   );
 };
