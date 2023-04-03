@@ -1,7 +1,9 @@
+import Directory from "./components/directory/directory.component";
+
 const App = () => {
   return (
     <div className="App">
-      <h1>nautes app</h1>
+      <Directory />
     </div>
   );
 };
