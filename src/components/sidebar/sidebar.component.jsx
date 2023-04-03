@@ -1,3 +1,5 @@
+import SideBarButton from "../side-bar-button/side-bar-button.component";
+
 import LogoContainer from "../logo-container/logo-container.component";
 import "./sidebar.styles.scss";
 
@@ -5,8 +7,8 @@ const SideBar = () => {
   return (
     <nav className="side-bar">
       <LogoContainer />
-      <h2>attività da completare</h2>
-      <h2>attività completate</h2>
+      <SideBarButton>Attività da completare</SideBarButton>
+      <SideBarButton>Attività completate</SideBarButton>
     </nav>
   );
 };
