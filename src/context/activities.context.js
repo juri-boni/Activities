@@ -1,5 +1,5 @@
 import { createContext, useState, useEffect } from "react";
-import { getUsers } from "../utils/requests";
+import { getUsers, getActivities } from "../utils/requests";
 
 export const ActivitiesContext = createContext({
   users: [],
@@ -9,7 +9,7 @@ export const ActivitiesContext = createContext({
 export const ActivitiesProvider = ({ children }) => {
   const [users, setUsers] = useState();
   const [activities, setActivities] = useState();
-  console.log(users);
+  console.log(users, activities);
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -17,6 +17,14 @@ export const ActivitiesProvider = ({ children }) => {
       setUsers(users);
     };
     fetchUsers();
+  }, []);
+
+  useEffect(() => {
+    const fetchActivities = async () => {
+      const activities = await getActivities();
+      setActivities(activities);
+    };
+    fetchActivities();
   }, []);
 
   const value = {

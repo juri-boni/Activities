@@ -4,4 +4,7 @@ export const getUsers = async () => {
   return await response.json();
 };
 
-// export const getActivities = fetch()
+export const getActivities = async () => {
+  const response = await fetch("http://localhost:3000/todos");
+  return await response.json();
+};
