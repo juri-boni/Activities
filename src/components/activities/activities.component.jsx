@@ -3,11 +3,11 @@ import NewActivitiesForm from "../new-activities-form/new-activities-form.compon
 
 import "./activities.styles.scss";
 
-const Activities = () => {
+const Activities = ({ todos }) => {
   return (
     <div className="activities-container">
       <h2>Attività da completare</h2>
-      <ActivitiesSheet />
+      <ActivitiesSheet todos={todos} />
       <NewActivitiesForm />
     </div>
   );

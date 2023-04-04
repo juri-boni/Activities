@@ -9,7 +9,6 @@ export const ActivitiesContext = createContext({
 export const ActivitiesProvider = ({ children }) => {
   const [users, setUsers] = useState();
   const [activities, setActivities] = useState();
-  console.log(users, activities);
 
   useEffect(() => {
     const fetchUsers = async () => {
