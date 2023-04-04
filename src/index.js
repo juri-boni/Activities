@@ -4,13 +4,16 @@ import "./index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { ActivitiesProvider } from "./context/activities.context";
+import { BrowserRouter } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <ActivitiesProvider>
-      <App />
-    </ActivitiesProvider>
+    <BrowserRouter>
+      <ActivitiesProvider>
+        <App />
+      </ActivitiesProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
