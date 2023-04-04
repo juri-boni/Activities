@@ -1,9 +1,12 @@
+import { Link } from "react-router-dom";
 import "./logo-container.styles.scss";
 
 const LogoContainer = () => {
   return (
     <div className="logo-container">
-      <h2 className="logo">LOGO</h2>
+      <Link to="/" className="logo">
+        LOGO
+      </Link>
     </div>
   );
 };

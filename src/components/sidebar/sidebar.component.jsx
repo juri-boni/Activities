@@ -7,8 +7,8 @@ const SideBar = () => {
   return (
     <nav className="side-bar">
       <LogoContainer />
-      <SideBarButton>Attività da completare</SideBarButton>
-      <SideBarButton>Attività completate</SideBarButton>
+      <SideBarButton path="/todos">Attività da completare</SideBarButton>
+      <SideBarButton path="/completed">Attività completate</SideBarButton>
     </nav>
   );
 };

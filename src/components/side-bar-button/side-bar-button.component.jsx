@@ -1,9 +1,13 @@
+import { Link } from "react-router-dom";
+
 import "./side-bar-button.styles.scss";
 
-const SideBarButton = ({ children }) => {
+const SideBarButton = ({ children, path }) => {
   return (
     <div className="side-bar-button-container">
-      <button className="side-bar-button">{children}</button>
+      <Link to={path} className="side-bar-button">
+        {children}
+      </Link>
     </div>
   );
 };
