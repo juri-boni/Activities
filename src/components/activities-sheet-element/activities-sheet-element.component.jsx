@@ -4,8 +4,6 @@ import "./activities-sheet-element.styles.scss";
 const ActivitiesSheetElement = ({ activity }) => {
   const { id, type, operator } = activity;
 
-  console.log(id % 2 === 0);
-
   return (
     <div className={`sheet-element ${id % 2 === 0 ? "transparent" : "normal"}`}>
       <div className="sheet-info">

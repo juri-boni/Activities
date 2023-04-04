@@ -1,0 +1,346 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstname": "Mike"
+    },
+    {
+      "id": 2,
+      "firstname": "Olivia"
+    },
+    {
+      "id": 3,
+      "firstname": "Sam"
+    },
+    {
+      "id": 4,
+      "firstname": "Ella"
+    },
+    {
+      "id": 5,
+      "firstname": "Virgie"
+    },
+    {
+      "id": 6,
+      "firstname": "Jeffery"
+    },
+    {
+      "id": 7,
+      "firstname": "Hettie"
+    },
+    {
+      "id": 8,
+      "firstname": "Stella"
+    },
+    {
+      "id": 9,
+      "firstname": "Susie"
+    },
+    {
+      "id": 10,
+      "firstname": "Lucy"
+    }
+  ],
+  "todos": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "task": "Get the milk",
+      "done": true
+    },
+    {
+      "id": 2,
+      "user_id": 6,
+      "task": "The determined dolphin comes from a calm cranberry",
+      "done": true
+    },
+    {
+      "id": 3,
+      "user_id": 4,
+      "task": "We can assume that any instance of a hamster can be construed as an emotional camel",
+      "done": false
+    },
+    {
+      "id": 4,
+      "user_id": 6,
+      "task": "Washing and polishing the car,their lion was, in this moment, a reserved chimpanzee",
+      "done": false
+    },
+    {
+      "id": 5,
+      "user_id": 5,
+      "task": "It's an undeniable fact, really; they were lost without the amiable bird that composed their lion",
+      "done": false
+    },
+    {
+      "id": 6,
+      "user_id": 4,
+      "task": "If this was somewhat unclear, a camel of the cheetah is assumed to be a smiling zebra",
+      "done": true
+    },
+    {
+      "id": 7,
+      "user_id": 6,
+      "task": "It's an undeniable fact, really; they were lost without the optimistic strawberry that composed their wolf",
+      "done": false
+    },
+    {
+      "id": 8,
+      "user_id": 7,
+      "task": "To be more specific, some posit the skillful chimpanzee to be less than righteous",
+      "done": true
+    },
+    {
+      "id": 9,
+      "user_id": 4,
+      "task": "To be more specific, a horse is a currant from the right perspective",
+      "done": false
+    },
+    {
+      "id": 10,
+      "user_id": 4,
+      "task": "By the waya bee is a zebra's panda",
+      "done": true
+    },
+    {
+      "id": 11,
+      "user_id": 4,
+      "task": "Framed in a different way, the fox is an apricot",
+      "done": true
+    },
+    {
+      "id": 12,
+      "user_id": 6,
+      "task": "Congratulations to the persimmon that won the hard-working persimmon with a rabbit",
+      "done": false
+    },
+    {
+      "id": 13,
+      "user_id": 3,
+      "task": "The giraffe of an octopus becomes a splendid alligator",
+      "done": false
+    },
+    {
+      "id": 14,
+      "user_id": 5,
+      "task": "Before giraffes, pigs were only apricots",
+      "done": false
+    },
+    {
+      "id": 15,
+      "user_id": 4,
+      "task": "Few can name a courageous grapefruit that isn't a proud kangaroo",
+      "done": false
+    },
+    {
+      "id": 16,
+      "user_id": 6,
+      "task": "After a long day at school and work, a scorpion is a cheetah from the right perspective",
+      "done": true
+    },
+    {
+      "id": 17,
+      "user_id": 8,
+      "task": "A hamster is an energetic kumquat",
+      "done": true
+    },
+    {
+      "id": 18,
+      "user_id": 6,
+      "task": "They were lost without the communicative lemon that composed their blueberry",
+      "done": true
+    },
+    {
+      "id": 19,
+      "user_id": 5,
+      "task": "A pear is the tangerine of a fig",
+      "done": false
+    },
+    {
+      "id": 20,
+      "user_id": 7,
+      "task": "We know that the literature would have us believe that an ambitious fig is not but an orange",
+      "done": true
+    },
+    {
+      "id": 21,
+      "user_id": 6,
+      "task": "The literature would have us believe that a powerful goldfish is not but a fly",
+      "done": false
+    },
+    {
+      "id": 22,
+      "user_id": 4,
+      "task": "Extending this logic, a cow sees a snail as a unusual elephant",
+      "done": true
+    },
+    {
+      "id": 23,
+      "user_id": 6,
+      "task": "Draped neatly on a hanger, the strawberry is a lobster",
+      "done": false
+    },
+    {
+      "id": 24,
+      "user_id": 5,
+      "task": "Their goldfish was, in this moment, a warm goldfish",
+      "done": false
+    },
+    {
+      "id": 25,
+      "user_id": 7,
+      "task": "Draped neatly on a hanger, a spider is the watermelon of a snail",
+      "done": true
+    },
+    {
+      "id": 26,
+      "user_id": 6,
+      "task": "After a long day at school and work, an elephant is the chicken of a pear",
+      "done": true
+    },
+    {
+      "id": 27,
+      "user_id": 4,
+      "task": "In his own words: \"It's very tricky, if not impossible, some posit the trustworthy horse to be less than shrewd?",
+      "done": false
+    },
+    {
+      "id": 28,
+      "user_id": 7,
+      "task": "The quiet goat reveals itself as a calm frog to those who look",
+      "done": false
+    },
+    {
+      "id": 29,
+      "user_id": 5,
+      "task": "A watermelon of the banana is assumed to be a kind-hearted pig",
+      "done": false
+    },
+    {
+      "id": 30,
+      "user_id": 4,
+      "task": "They were lost without the discreet giraffe that composed their octopus",
+      "done": true
+    },
+    {
+      "id": 31,
+      "user_id": 4,
+      "task": "An apricot of the deer is assumed to be a shy currant",
+      "done": false
+    },
+    {
+      "id": 32,
+      "user_id": 2,
+      "task": "In modern times their seal was, in this moment, a considerate octopus",
+      "done": true
+    },
+    {
+      "id": 33,
+      "user_id": 5,
+      "task": "If this was somewhat unclear, authors often misinterpret the frog as a conscientious apricot, when in actuality it feels more like a cultured bird",
+      "done": false
+    },
+    {
+      "id": 34,
+      "user_id": 6,
+      "task": "They were lost without the humorous octopus that composed their apple",
+      "done": true
+    },
+    {
+      "id": 35,
+      "user_id": 3,
+      "task": "The zeitgeist contends that few can name a productive apricot that isn't a trustworthy snake",
+      "done": true
+    },
+    {
+      "id": 36,
+      "user_id": 3,
+      "task": "They were lost without the relieved lime that composed their rabbit",
+      "done": false
+    },
+    {
+      "id": 37,
+      "user_id": 5,
+      "task": "After a long day at school and work, the first sympathetic pig is, in its own way, a rat",
+      "done": true
+    },
+    {
+      "id": 38,
+      "user_id": 4,
+      "task": "However, a kangaroo sees a giraffe as a succinct grapefruit",
+      "done": false
+    },
+    {
+      "id": 39,
+      "user_id": 4,
+      "task": "As far as he is concerned, they were lost without the jolly cranberry that composed their owl",
+      "done": false
+    },
+    {
+      "id": 40,
+      "user_id": 8,
+      "task": "Peaceful fishes show us how melons can be zebras",
+      "done": true
+    },
+    {
+      "id": 41,
+      "user_id": 4,
+      "task": "A bright octopus's rabbit comes with it the thought that the quick-witted tiger is a snail",
+      "done": true
+    },
+    {
+      "id": 42,
+      "user_id": 7,
+      "task": "In her own words: \"To be more specific, incomprehensibilities of a inventive bird and a pear made a scorpion joyous!",
+      "done": true
+    },
+    {
+      "id": 43,
+      "user_id": 7,
+      "task": "It's very tricky, if not impossible, some pioneering cheetahs are thought of simply as strawberries",
+      "done": false
+    },
+    {
+      "id": 44,
+      "user_id": 4,
+      "task": "An alligator can hardly be considered a courageous strawberry without also being a persimmon",
+      "done": true
+    },
+    {
+      "id": 45,
+      "user_id": 4,
+      "task": "However, some unassuming cats are thought of simply as squirrels",
+      "done": false
+    },
+    {
+      "id": 46,
+      "user_id": 6,
+      "task": "A kumquat is an eagle from the right perspective",
+      "done": true
+    },
+    {
+      "id": 47,
+      "user_id": 4,
+      "task": "If this was somewhat unclear, we can assume that any instance of a snake can be construed as a comfortable blueberry",
+      "done": false
+    },
+    {
+      "id": 48,
+      "user_id": 5,
+      "task": "Pineapples are generous pandas",
+      "done": true
+    },
+    {
+      "id": 49,
+      "user_id": 10,
+      "task": "Backup the MacBook",
+      "done": false
+    },
+    {
+      "id": 50,
+      "user_id": 9,
+      "task": "Write the damn resolver!",
+      "done": false
+    }
+  ]
+}
