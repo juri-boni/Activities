@@ -1,7 +1,6 @@
 import Directory from "../../components/directory/directory.component";
-
-const Completed = () => {
+const Home = () => {
   return <Directory></Directory>;
 };
 
-export default Completed;
+export default Home;
