@@ -1,0 +1,17 @@
+.arrows-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin-right: 2rem;
+
+  .arrow-button {
+    font-size: 2rem;
+    color: #333;
+    cursor: pointer;
+  }
+
+  .page-number {
+    font-size: 1.2rem;
+  }
+}
