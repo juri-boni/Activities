@@ -7,9 +7,9 @@ import Pagination from "../pagination/pagination.component";
 import "./activities.styles.scss";
 
 const Activities = ({ todos }) => {
-  const [currentPage, setCurrentPage] = useState(1);
+  const [activitiesCurrentPage, setActivitiesCurrentPage] = useState(1);
   const [tasksPerPage, setTasksPerPage] = useState(5);
-  const indexOfLastTask = currentPage * tasksPerPage;
+  const indexOfLastTask = activitiesCurrentPage * tasksPerPage;
   const indexOfFirstTask = indexOfLastTask - tasksPerPage;
   const currentTodos = todos?.slice(indexOfFirstTask, indexOfLastTask);
 
@@ -17,7 +17,7 @@ const Activities = ({ todos }) => {
     <div className="activities-container">
       <h2>Attività da completare</h2>
       <ActivitiesSheet todos={currentTodos} />
-      <Pagination currentPage={currentPage} />
+      <Pagination activitiesCurrentPage={activitiesCurrentPage} />
       <NewActivitiesForm />
     </div>
   );

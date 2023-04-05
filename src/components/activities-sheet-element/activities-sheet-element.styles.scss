@@ -4,12 +4,12 @@
   align-items: center;
   height: 4rem;
   padding: 0 2rem;
+  background-color: #fff;
 
-  &.transparent {
-    background-color: transparent;
-  }
+  // &.transparent {
+  //   background-color: transparent;
+  // }
 
   &.normal {
-    background-color: #fff;
   }
 }
