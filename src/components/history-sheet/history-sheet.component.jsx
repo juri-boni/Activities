@@ -6,7 +6,7 @@ const HistorySheet = ({ completes }) => {
     <div className="sheet-container">
       <FormInput label="Filtra per operatore" />
       <div className="sheet-description">
-        <span>Attività</span>
+        <span className="sheet-description_activity">Attività</span>
         <span>Operatore</span>
       </div>
 

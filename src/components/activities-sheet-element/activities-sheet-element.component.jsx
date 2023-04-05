@@ -7,9 +7,9 @@ const ActivitiesSheetElement = ({ todo }) => {
 
   return (
     <div className={`sheet-element ${id % 2 === 0 ? "transparent" : "normal"}`}>
-      <div className="sheet-info">
-        <span>{operator}</span>
-        <span>{task}</span>
+      <div className="sheet-element_info">
+        <span className="sheet-element_operator">{operator}</span>
+        <span className="sheet-element_task">{task}</span>
       </div>
 
       <Button buttonType="small">svolgi</Button>

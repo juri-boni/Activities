@@ -12,4 +12,9 @@
 
   &.normal {
   }
+
+  &_operator {
+    display: inline-block;
+    width: 8rem;
+  }
 }
