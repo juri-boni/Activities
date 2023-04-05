@@ -1,10 +1,11 @@
 import FormInput from "../form-input/form-input.component";
 import HistorySheetElement from "../history-sheet-element/history-sheet-element.component";
+import SearchBox from "../search-box/search-box.component";
 
 const HistorySheet = ({ completes }) => {
   return (
     <div className="sheet-container">
-      <FormInput label="Filtra per operatore" />
+      <SearchBox placeholder="Filtra per operatore" />
       <div className="sheet-description">
         <span className="sheet-description_activity">Attività</span>
         <span>Operatore</span>
