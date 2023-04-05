@@ -11,7 +11,7 @@ const Activities = ({ todos }) => {
   const [tasksPerPage, setTasksPerPage] = useState(5);
   const indexOfLastTask = currentPage * tasksPerPage;
   const indexOfFirstTask = indexOfLastTask - tasksPerPage;
-  const currentTodos = todos.slice(indexOfFirstTask, indexOfLastTask);
+  const currentTodos = todos?.slice(indexOfFirstTask, indexOfLastTask);
 
   return (
     <div className="activities-container">
