@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import { ActivitiesContext } from "../../context/activities.context";
 import "./pagination.styles.scss";
 
-const Pagination = ({ todos, completes }) => {
+const Pagination = () => {
   const location = useLocation();
   const {
     activitiesCurrentPage,

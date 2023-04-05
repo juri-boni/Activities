@@ -1,5 +1,14 @@
+import { useState } from "react";
+
 const HistorySheetElement = ({ complete }) => {
   const { id, user_id, task, operator, done } = complete;
+  const [searchHistoryField, setSearchHistoryField] = useState("");
+
+  const onSearchChange = (e) => {
+    const searchFieldString = e.target.value.toLowerCase();
+
+    setSearchHistoryField(searchFieldString);
+  };
 
   return (
     <div className={`sheet-element ${id % 2 === 0 ? "transparent" : "normal"}`}>

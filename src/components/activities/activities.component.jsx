@@ -8,10 +8,15 @@ import Pagination from "../pagination/pagination.component";
 import "./activities.styles.scss";
 
 const Activities = ({ todos }) => {
-  const { activitiesCurrentPage } = useContext(ActivitiesContext);
+  const { activitiesCurrentPage, filteredActivities } =
+    useContext(ActivitiesContext);
+
   const [tasksPerPage, setTasksPerPage] = useState(5);
+
   const indexOfLastTask = activitiesCurrentPage * tasksPerPage;
+
   const indexOfFirstTask = indexOfLastTask - tasksPerPage;
+
   const currentTodos = todos?.slice(indexOfFirstTask, indexOfLastTask);
 
   return (

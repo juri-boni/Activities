@@ -9,9 +9,15 @@ import "./main-screen.styles.scss";
 
 const MainScreen = () => {
   const location = useLocation();
-  const { activities } = useContext(ActivitiesContext);
-  const todos = activities?.filter((activity) => activity.done === false);
-  const completes = activities?.filter((activity) => activity.done === true);
+  const { activities, filteredActivities } = useContext(ActivitiesContext);
+
+  const todos = filteredActivities?.filter(
+    (activity) => activity.done === false
+  );
+
+  const completes = filteredActivities?.filter(
+    (activity) => activity.done === true
+  );
 
   return (
     <div className="main-screen-container">
