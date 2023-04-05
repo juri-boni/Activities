@@ -12,20 +12,48 @@ const Pagination = ({ todos, completes }) => {
     setHistoryCurrentPage,
   } = useContext(ActivitiesContext);
 
-  const increaseHistoryPageHandler = () => {};
-  const decreaseHistoryPageHandler = () => {};
-  const increaseActivityPageHandler = () => {};
-  const deacreaseActivityPageHandler = () => {};
+  const increaseHistoryPageHandler = () => {
+    setHistoryCurrentPage(historyCurrentPage + 1);
+  };
+  const decreaseHistoryPageHandler = () => {
+    if (historyCurrentPage === 1) return;
+    setHistoryCurrentPage(historyCurrentPage - 1);
+  };
+  const increaseActivitiesPageHandler = () => {
+    setActivitiesCurrentPage(activitiesCurrentPage + 1);
+  };
+  const decreaseActivitiesPageHandler = () => {
+    if (activitiesCurrentPage === 1) return;
+    setActivitiesCurrentPage(activitiesCurrentPage - 1);
+  };
 
   return (
     <div className="arrows-container">
-      <span className="arrow-button">&#10094;</span>
+      <span
+        className="arrow-button"
+        onClick={
+          location.pathname === "/todos"
+            ? decreaseActivitiesPageHandler
+            : decreaseHistoryPageHandler
+        }
+      >
+        &#10094;
+      </span>
       <span className="page-number">
         {location.pathname === "/todos"
           ? `${activitiesCurrentPage}`
           : `${historyCurrentPage}`}
       </span>
-      <span className="arrow-button">&#10095;</span>
+      <span
+        className="arrow-button"
+        onClick={
+          location.pathname === "/todos"
+            ? increaseActivitiesPageHandler
+            : increaseHistoryPageHandler
+        }
+      >
+        &#10095;
+      </span>
     </div>
   );
 };
