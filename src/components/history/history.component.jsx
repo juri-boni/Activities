@@ -6,9 +6,13 @@ import { ActivitiesContext } from "../../context/activities.context";
 
 const History = ({ completes }) => {
   const { historyCurrentPage } = useContext(ActivitiesContext);
+
   const [tasksPerPage, setTasksPerPage] = useState(5);
+
   const indexOfLastTask = historyCurrentPage * tasksPerPage;
+
   const indexOfFirstTask = indexOfLastTask - tasksPerPage;
+
   const currentCompletes = completes?.slice(indexOfFirstTask, indexOfLastTask);
 
   return (

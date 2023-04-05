@@ -35,7 +35,7 @@ const HistorySheet = ({ completes }) => {
         <span>Operatore</span>
       </div>
 
-      {filteredActivities?.map((complete) => (
+      {completes?.map((complete) => (
         <HistorySheetElement key={complete.id} complete={complete} />
       ))}
     </div>
