@@ -3,6 +3,7 @@ import ActivitiesSheetElement from "../activities-sheet-element/activities-sheet
 import "./activities-sheet.styles.scss";
 
 const ActivitiesSheet = ({ todos }) => {
+  console.log(todos);
   return (
     <div className="sheet-container">
       <FormInput label="Filtra per operatore" />

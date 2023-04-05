@@ -9,6 +9,7 @@ export const ActivitiesContext = createContext({
 export const ActivitiesProvider = ({ children }) => {
   const [users, setUsers] = useState();
   const [activities, setActivities] = useState();
+  console.log(activities);
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -25,7 +26,6 @@ export const ActivitiesProvider = ({ children }) => {
     };
     fetchActivities();
   }, []);
-
   const value = {
     users,
     activities,
