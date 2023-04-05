@@ -4,12 +4,15 @@ import { getUsers, getActivities } from "../utils/requests";
 export const ActivitiesContext = createContext({
   users: [],
   activities: [],
+  activitiesCurrentPage: 1,
+  historyCurrentPage: 1,
 });
 
 export const ActivitiesProvider = ({ children }) => {
   const [users, setUsers] = useState();
   const [activities, setActivities] = useState();
-  console.log(activities);
+  const [activitiesCurrentPage, setActivitiesCurrentPage] = useState(1);
+  const [historyCurrentPage, setHistoryCurrentPage] = useState(1);
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -29,6 +32,10 @@ export const ActivitiesProvider = ({ children }) => {
   const value = {
     users,
     activities,
+    activitiesCurrentPage,
+    setActivitiesCurrentPage,
+    historyCurrentPage,
+    setHistoryCurrentPage,
   };
 
   return (

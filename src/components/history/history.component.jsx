@@ -14,7 +14,7 @@ const History = ({ completes }) => {
     <div className="history-container">
       <h1>Attività Completate</h1>
       <HistorySheet completes={currentCompletes} />
-      <Pagination historyCurrentPage={historyCurrentPage} />
+      <Pagination completes={currentCompletes} />
     </div>
   );
 };

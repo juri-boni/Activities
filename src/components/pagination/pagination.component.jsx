@@ -1,8 +1,21 @@
+import { useContext } from "react";
 import { useLocation } from "react-router-dom";
+import { ActivitiesContext } from "../../context/activities.context";
 import "./pagination.styles.scss";
 
-const Pagination = ({ activitiesCurrentPage, historyCurrentPage }) => {
+const Pagination = ({ todos, completes }) => {
   const location = useLocation();
+  const {
+    activitiesCurrentPage,
+    setActivitiesCurrentPage,
+    historyCurrentPage,
+    setHistoryCurrentPage,
+  } = useContext(ActivitiesContext);
+
+  const increaseHistoryPageHandler = () => {};
+  const decreaseHistoryPageHandler = () => {};
+  const increaseActivityPageHandler = () => {};
+  const deacreaseActivityPageHandler = () => {};
 
   return (
     <div className="arrows-container">

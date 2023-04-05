@@ -17,7 +17,7 @@ const Activities = ({ todos }) => {
     <div className="activities-container">
       <h2>Attività da completare</h2>
       <ActivitiesSheet todos={currentTodos} />
-      <Pagination activitiesCurrentPage={activitiesCurrentPage} />
+      <Pagination todos={currentTodos} />
       <NewActivitiesForm />
     </div>
   );
