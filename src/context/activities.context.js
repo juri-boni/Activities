@@ -4,8 +4,8 @@ import { getUsers, getActivities } from "../utils/requests";
 export const ActivitiesContext = createContext({
   users: [],
   activities: [],
-  filteredActivities: [],
   currentPage: 1,
+  elementsPerPage: 5,
   searchField: "",
 });
 
@@ -14,6 +14,7 @@ export const ActivitiesProvider = ({ children }) => {
   const [activities, setActivities] = useState([]);
   const [searchField, setSerchField] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
+  const [elementsPerPage, setElementsPerPage] = useState(5);
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -35,8 +36,8 @@ export const ActivitiesProvider = ({ children }) => {
     users,
     activities,
     setActivities,
-
     currentPage,
+    elementsPerPage,
     setCurrentPage,
     searchField,
     setSerchField,

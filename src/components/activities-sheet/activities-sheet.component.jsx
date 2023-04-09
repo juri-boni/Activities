@@ -2,7 +2,7 @@ import ActivitiesSheetElement from "../activities-sheet-element/activities-sheet
 import SearchBox from "../search-box/search-box.component";
 import "./activities-sheet.styles.scss";
 
-const ActivitiesSheet = ({ todos }) => {
+const ActivitiesSheet = ({ todos, todosPage }) => {
   return (
     <div className="sheet-container">
       <SearchBox placeholder="Filtra per operatore" />
