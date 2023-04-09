@@ -8,22 +8,11 @@ import Pagination from "../pagination/pagination.component";
 import "./activities.styles.scss";
 
 const Activities = ({ todos }) => {
-  const { activitiesCurrentPage, filteredActivities } =
-    useContext(ActivitiesContext);
-
-  const [tasksPerPage, setTasksPerPage] = useState(5);
-
-  const indexOfLastTask = activitiesCurrentPage * tasksPerPage;
-
-  const indexOfFirstTask = indexOfLastTask - tasksPerPage;
-
-  const currentTodos = todos?.slice(indexOfFirstTask, indexOfLastTask);
-
   return (
     <div className="activities-container">
       <h2>Attività da completare</h2>
-      <ActivitiesSheet todos={currentTodos} />
-      <Pagination todos={currentTodos} />
+      <ActivitiesSheet todos={todos} />
+      <Pagination />
       <NewActivitiesForm />
     </div>
   );

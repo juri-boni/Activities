@@ -5,19 +5,15 @@ export const ActivitiesContext = createContext({
   users: [],
   activities: [],
   filteredActivities: [],
-  activitiesCurrentPage: 1,
-  historyCurrentPage: 1,
+  currentPage: 1,
   searchField: "",
 });
 
 export const ActivitiesProvider = ({ children }) => {
   const [users, setUsers] = useState();
   const [activities, setActivities] = useState([]);
-  const [filteredActivities, setFilteredActivities] = useState(activities);
-
-  const [activitiesCurrentPage, setActivitiesCurrentPage] = useState(1);
   const [searchField, setSerchField] = useState("");
-  const [historyCurrentPage, setHistoryCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -31,7 +27,6 @@ export const ActivitiesProvider = ({ children }) => {
     const fetchActivities = async () => {
       const activities = await getActivities();
       setActivities(activities);
-      setFilteredActivities(activities);
     };
     fetchActivities();
   }, []);
@@ -40,12 +35,9 @@ export const ActivitiesProvider = ({ children }) => {
     users,
     activities,
     setActivities,
-    filteredActivities,
-    setFilteredActivities,
-    activitiesCurrentPage,
-    setActivitiesCurrentPage,
-    historyCurrentPage,
-    setHistoryCurrentPage,
+
+    currentPage,
+    setCurrentPage,
     searchField,
     setSerchField,
   };
