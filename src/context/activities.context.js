@@ -2,7 +2,6 @@ import { createContext, useState, useEffect } from "react";
 import { getActivities } from "../utils/requests";
 
 export const ActivitiesContext = createContext({
-  users: [],
   activities: [],
   filteredActivities: [],
   currentPage: 1,
@@ -10,7 +9,6 @@ export const ActivitiesContext = createContext({
 });
 
 export const ActivitiesProvider = ({ children }) => {
-  const [users, setUsers] = useState();
   const [activities, setActivities] = useState([]);
   const [filteredActivities, setFilteredActivities] = useState(activities);
   const [currentPage, setCurrentPage] = useState(1);
@@ -20,23 +18,9 @@ export const ActivitiesProvider = ({ children }) => {
     const fetchActivities = async () => {
       const activities = await getActivities();
       setActivities(activities);
-      // setFilteredActivities(activities);
     };
     fetchActivities();
   }, []);
-
-  useEffect(() => {
-    setFilteredActivities(activities);
-    console.log(filteredActivities);
-  });
-
-  // useEffect(() => {
-  //   const fetchUsers = async () => {
-  //     const users = await getUsers();
-  //     setUsers(users);
-  //   };
-  //   fetchUsers();
-  // }, []);
 
   const value = {
     activities,
