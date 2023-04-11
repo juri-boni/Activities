@@ -20,14 +20,16 @@ const MainScreen = () => {
     <div className="main-screen-container">
       <NavBar />
       {location.pathname === "/todos" && (
-        <h2 className="title">Attività da completare</h2>
+        <h2 className="section-title">Attività da completare</h2>
       )}
       {location.pathname === "/completed" && (
-        <h2 className="title">Attività completate</h2>
+        <h2 className="section-title">Attività completate</h2>
       )}
-      {location.pathname !== "/" && (
-        <SearchBox placeholder="Filtra per operatore" />
-      )}
+      <div className="searchbox-container">
+        {location.pathname !== "/" && (
+          <SearchBox placeholder="Filtra per operatore" />
+        )}
+      </div>
       {location.pathname === "/todos" && <Activities todos={todos} />}
       {location.pathname === "/completed" && <History completes={completes} />}
     </div>
