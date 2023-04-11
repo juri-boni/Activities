@@ -17,7 +17,7 @@ const History = ({ completes }) => {
 
   return (
     <div className="history-container">
-      <h1>Attività Completate</h1>
+      {/* <h1>Attività Completate</h1> */}
       <HistorySheet completes={completedRange} />
       <Pagination />
     </div>

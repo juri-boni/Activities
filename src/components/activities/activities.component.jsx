@@ -16,7 +16,7 @@ const Activities = ({ todos }) => {
 
   return (
     <div className="activities-container">
-      <h2>Attività da completare</h2>
+      {/* <h2>Attività da completare</h2> */}
       <ActivitiesSheet todos={todoRange} />
       <Pagination />
       <NewActivitiesForm />

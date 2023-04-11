@@ -1,8 +1,9 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { ActivitiesContext } from "../../context/activities.context";
 
 import NavBar from "../navbar/navbar.component";
+import SearchBox from "../search-box/search-box.component";
 import Activities from "../activities/activities.component";
 import History from "../history/history.component";
 import "./main-screen.styles.scss";
@@ -18,6 +19,12 @@ const MainScreen = () => {
   return (
     <div className="main-screen-container">
       <NavBar />
+      <h2 className="title">
+        {location.pathname === "/todos"
+          ? "Attività da completare"
+          : " Attività completate"}
+      </h2>
+      <SearchBox placeholder="Filtra per operatore" />
       {location.pathname === "/todos" && <Activities todos={todos} />}
       {location.pathname === "/completed" && <History completes={completes} />}
     </div>
