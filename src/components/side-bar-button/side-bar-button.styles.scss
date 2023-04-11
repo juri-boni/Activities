@@ -1,6 +1,9 @@
 .side-bar-button-container {
   display: flex;
-  margin-bottom: 1rem;
+
+  &.active {
+    background-color: #222e3a;
+  }
 
   .active-bar {
     min-width: 0.7rem;
@@ -13,7 +16,7 @@
   .side-bar-button {
     background-color: transparent;
     border: none;
-    color: #fff;
+    color: #bbb;
     font-size: 1rem;
     padding: 2rem;
   }

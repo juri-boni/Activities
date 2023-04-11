@@ -11,7 +11,12 @@ const SideBarButton = ({ children, path }) => {
   const resetCurrentPage = () => setCurrentPage(1);
 
   return (
-    <div className="side-bar-button-container" onClick={resetCurrentPage}>
+    <div
+      className={`side-bar-button-container ${
+        location.pathname === path && "active"
+      }`}
+      onClick={resetCurrentPage}
+    >
       <div
         className={`active-bar ${location.pathname === path && "redbar"}`}
       ></div>
