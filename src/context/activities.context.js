@@ -10,7 +10,7 @@ export const ActivitiesContext = createContext({
 
 export const ActivitiesProvider = ({ children }) => {
   const [activities, setActivities] = useState([]);
-  const [filteredActivities, setFilteredActivities] = useState(activities);
+  // const [filteredActivities, setFilteredActivities] = useState(activities);
   const [currentPage, setCurrentPage] = useState(1);
   const [elementsPerPage, setElementsPerPage] = useState(5);
 

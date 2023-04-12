@@ -1,12 +1,22 @@
+import { useContext } from "react";
+
 import Button from "../button/button.component";
-import { updateActivity } from "../../utils/requests";
+import { getActivities, updateActivity } from "../../utils/requests";
 import "./activities-sheet-element.styles.scss";
+import { ActivitiesContext } from "../../context/activities.context";
 
 const ActivitiesSheetElement = ({ todo }) => {
   const { id, user_id, task, operator, done } = todo;
+  const { activities, setActivities } = useContext(ActivitiesContext);
+
+  const fetchActivities = async () => {
+    const activities = await getActivities();
+    setActivities(activities);
+  };
 
   const changeActivity = async () => {
     await updateActivity(id, user_id, task, operator, done);
+    await fetchActivities();
   };
 
   return (
