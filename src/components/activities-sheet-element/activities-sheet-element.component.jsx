@@ -1,9 +1,13 @@
 import Button from "../button/button.component";
+import { updateActivity } from "../../utils/requests";
 import "./activities-sheet-element.styles.scss";
 
 const ActivitiesSheetElement = ({ todo }) => {
   const { id, user_id, task, operator, done } = todo;
-  // console.log(todo);
+
+  const changeActivity = async () => {
+    await updateActivity(id, user_id, task, operator, done);
+  };
 
   return (
     <div className={`sheet-element ${id % 2 === 0 ? "transparent" : "normal"}`}>
@@ -12,7 +16,9 @@ const ActivitiesSheetElement = ({ todo }) => {
         <span className="sheet-element_task">{task}</span>
       </div>
 
-      <Button buttonType="small">svolgi</Button>
+      <Button buttonType="small" onClick={changeActivity}>
+        svolgi
+      </Button>
     </div>
   );
 };

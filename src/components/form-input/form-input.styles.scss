@@ -23,7 +23,8 @@
       color: #2a3948;
     }
 
-    &:focus ~ .labelline {
+    &:focus ~ .labelline,
+    &:valid ~ .labelline {
       color: #4eadc1;
       height: 2rem;
       line-height: 2rem;
