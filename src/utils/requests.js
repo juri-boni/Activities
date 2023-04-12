@@ -22,7 +22,7 @@ export const updateActivity = async (id, user_id, task, operator, done) => {
       user_id: user_id,
       task: task,
       operator: operator,
-      done: true,
+      done: !done,
     }),
   });
 
