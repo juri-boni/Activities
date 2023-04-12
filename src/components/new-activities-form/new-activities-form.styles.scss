@@ -1,9 +1,18 @@
-.new-activities-form-container {
+.new-activities-container {
   display: flex;
+  flex-direction: column;
   background-color: #cfd8e0;
+  border-radius: 5px;
+
+  .new-activities-form-container {
+    display: flex;
+  }
 
   .new-activities-buttons-container {
     display: flex;
+    align-items: center;
+    justify-content: flex-end;
     gap: 1rem;
+    padding: 0 2rem 2rem 0;
   }
 }

@@ -1,13 +1,17 @@
 .sheet-container {
   margin-bottom: 3rem;
+  overflow: hidden;
+  border-radius: 5px;
 
   .sheet-description {
+    color: #fff;
+
     display: flex;
     align-items: center;
     padding-left: 2rem;
     background-color: #be0010;
     height: 4rem;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 1.2rem;
 
     &_activity {

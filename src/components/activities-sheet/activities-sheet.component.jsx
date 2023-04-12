@@ -4,7 +4,6 @@ import "./activities-sheet.styles.scss";
 const ActivitiesSheet = ({ todos, todosPage }) => {
   return (
     <div className="sheet-container">
-      {/* <SearchBox placeholder="Filtra per operatore" /> */}
       <div className="sheet-description">
         <span className="sheet-description_activity">Attività</span>
         <span>Operatore</span>
