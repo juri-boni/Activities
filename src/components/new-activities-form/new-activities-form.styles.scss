@@ -3,9 +3,12 @@
   flex-direction: column;
   background-color: #cfd8e0;
   border-radius: 5px;
+  padding: 3rem 2rem 2rem 2rem;
 
   .new-activities-form-container {
+    width: 100%;
     display: flex;
+    gap: 1rem;
   }
 
   .new-activities-buttons-container {
@@ -13,6 +16,5 @@
     align-items: center;
     justify-content: flex-end;
     gap: 1rem;
-    padding: 0 2rem 2rem 0;
   }
 }

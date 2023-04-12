@@ -2,9 +2,9 @@ import "./form-input.styles.scss";
 
 const FormInput = ({ label, ...otherProps }) => {
   return (
-    <div className="group">
+    <div className="entryarea">
       <input className="form-input" {...otherProps} />
-      {label && <label>{label}</label>}
+      {label && <label className="labelline">{label}</label>}
     </div>
   );
 };

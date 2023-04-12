@@ -1,54 +1,43 @@
-// $sub-color: grey;
-// $main-color: black;
+.entryarea {
+  position: relative;
+  height: 6rem;
+  line-height: 4rem;
+  width: 100%;
 
-// @mixin shrinkLabel {
-//   top: -14px;
-//   font-size: 12px;
-//   color: $main-color;
-// }
+  .form-input {
+    position: absolute;
+    padding: 1rem;
+    border-radius: 4px;
+    border: 1px solid #2a3948;
+    line-height: 2rem;
+    width: 100%;
+    outline: none;
+    font-size: 1.2rem;
+    transition: 0.1s ease;
+    background: transparent;
+    z-index: 1111;
 
-// .group {
-//   position: relative;
-//   margin: 45px 0;
+    &:focus {
+      background-color: #eee;
+      border: 2px solid #4eadc1;
+      color: #2a3948;
+    }
 
-//   .form-input {
-//     background: none;
-//     background-color: white;
-//     color: $sub-color;
-//     font-size: 18px;
-//     padding: 10px 10px 10px 5px;
-//     display: block;
-//     width: 100%;
-//     border: none;
-//     border-radius: 0;
-//     border-bottom: 1px solid $sub-color;
-//     margin: 25px 0;
+    &:focus ~ .labelline {
+      color: #4eadc1;
+      height: 2rem;
+      line-height: 2rem;
+      transform: translate(-1.5rem, -1.6rem) scale(0.88);
+      z-index: 1111;
+    }
+  }
 
-//     &:focus {
-//       outline: none;
-//     }
-
-//     &:focus ~ .form-input-label {
-//       @include shrinkLabel();
-//     }
-//   }
-
-//   input[type="password"] {
-//     letter-spacing: 0.3em;
-//   }
-
-//   .form-input-label {
-//     color: $sub-color;
-//     font-size: 16px;
-//     font-weight: normal;
-//     position: absolute;
-//     pointer-events: none;
-//     left: 5px;
-//     top: 10px;
-//     transition: 300ms ease all;
-
-//     &.shrink {
-//       @include shrinkLabel();
-//     }
-//   }
-// }
+  .labelline {
+    position: absolute;
+    font-size: 1.3rem;
+    color: #111;
+    font-weight: 500;
+    padding: 0 2.5rem;
+    transition: 0.2s ease;
+  }
+}
