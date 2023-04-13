@@ -27,6 +27,7 @@ const Pagination = ({ todosPages, historyPage }) => {
     <Fragment>
       <div className="pagination-container">
         <div className="elements-number-container">
+          <h4>Mostra</h4>
           <div className="element-number">
             <button onClick={() => setElementsPerPage(5)}>5</button>
           </div>

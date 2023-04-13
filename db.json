@@ -61,7 +61,7 @@
       "user_id": 4,
       "task": "We can assume that any instance of a hamster can be construed as an emotional camel",
       "operator": "Ella",
-      "done": false
+      "done": true
     },
     {
       "id": 4,
