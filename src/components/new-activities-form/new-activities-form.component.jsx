@@ -11,7 +11,7 @@ const defaultFormFields = {
 };
 
 const NewActivitiesForm = () => {
-  const { activities, setActivities } = useContext(ActivitiesContext);
+  const { activities, setActivities, users } = useContext(ActivitiesContext);
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { task, name } = formFields;
 
@@ -26,8 +26,10 @@ const NewActivitiesForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    const existingUser = users.find((user) => user.firstname === name);
     const id = activities.length + 1;
-    const user_id = 11;
+    const user_id = existingUser ? existingUser.id : users.length + 1;
+    console.log(user_id);
     const operator = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
 
     try {
