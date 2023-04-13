@@ -23,26 +23,33 @@ const Pagination = ({ todosPages, historyPage }) => {
   const handleDecrease = () => decreaseButtonHandler();
 
   return (
-    <div className="arrows-container">
-      {currentPage !== 1 && (
-        <span className="arrow-button" onClick={handleDecrease}>
-          &#10094;
-        </span>
-      )}
+    <div className="pagination-container">
+      <div className="arrows-container">
+        <div className="arrow-container">
+          {currentPage !== 1 && (
+            <span className="arrow-button" onClick={handleDecrease}>
+              &#10094;
+            </span>
+          )}
+        </div>
 
-      <span className="page-number">Page {currentPage}</span>
+        <div className="page-number-container">
+          <span className="page-number">Page {currentPage}</span>
+        </div>
+        <div className="arrow-container">
+          {location.pathname === "/todos" && currentPage < todosPages && (
+            <span className="arrow-button" onClick={handleIncrease}>
+              &#10095;
+            </span>
+          )}
 
-      {location.pathname === "/todos" && currentPage < todosPages && (
-        <span className="arrow-button" onClick={handleIncrease}>
-          &#10095;
-        </span>
-      )}
-
-      {location.pathname === "/completed" && currentPage < historyPage && (
-        <span className="arrow-button" onClick={handleIncrease}>
-          &#10095;
-        </span>
-      )}
+          {location.pathname === "/completed" && currentPage < historyPage && (
+            <span className="arrow-button" onClick={handleIncrease}>
+              &#10095;
+            </span>
+          )}
+        </div>
+      </div>
     </div>
   );
 };
