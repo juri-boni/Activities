@@ -38,6 +38,7 @@ export const ActivitiesProvider = ({ children }) => {
     currentPage,
     setCurrentPage,
     elementsPerPage,
+    setElementsPerPage,
   };
 
   return (
