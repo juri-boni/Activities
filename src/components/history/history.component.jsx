@@ -7,7 +7,7 @@ import "./history.styles.scss";
 
 const History = ({ completes }) => {
   const { elementsPerPage, currentPage } = useContext(ActivitiesContext);
-
+  const historyPage = Math.ceil(completes.length / elementsPerPage);
   const idxOfLastCompleted = elementsPerPage * currentPage;
   const idxOfFirstCompleted = idxOfLastCompleted - elementsPerPage;
   const completedRange = completes.slice(
@@ -19,7 +19,7 @@ const History = ({ completes }) => {
     <div className="history-container">
       {/* <h1>Attività Completate</h1> */}
       <HistorySheet completes={completedRange} />
-      <Pagination />
+      <Pagination historyPage={historyPage} />
     </div>
   );
 };

@@ -9,16 +9,15 @@ import "./activities.styles.scss";
 
 const Activities = ({ todos }) => {
   const { elementsPerPage, currentPage } = useContext(ActivitiesContext);
-  // const todosPages = todos.length / elementsPerPage;
+  const todosPages = Math.ceil(todos.length / elementsPerPage);
   const idxOfLastTodo = elementsPerPage * currentPage;
   const idxOfFirstTodo = idxOfLastTodo - elementsPerPage;
   const todoRange = todos.slice(idxOfFirstTodo, idxOfLastTodo);
 
   return (
     <div className="activities-container">
-      {/* <h2>Attività da completare</h2> */}
       <ActivitiesSheet todos={todoRange} />
-      <Pagination />
+      <Pagination todosPages={todosPages} />
       <NewActivitiesForm />
     </div>
   );

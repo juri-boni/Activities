@@ -29,7 +29,6 @@ const NewActivitiesForm = () => {
     const existingUser = users.find((user) => user.firstname === name);
     const id = activities.length + 1;
     const user_id = existingUser ? existingUser.id : users.length + 1;
-    console.log(user_id);
     const operator = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
 
     try {
