@@ -2,6 +2,7 @@ import { useState, Fragment } from "react";
 import FormInput from "../form-input/form-input.component";
 import Button from "../button/button.component";
 import "./new-activities-form.styles.scss";
+import { postActivity } from "../../utils/requests";
 
 const defaultFormFields = {
   task: "",
@@ -11,13 +12,25 @@ const defaultFormFields = {
 const NewActivitiesForm = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { task, operator } = formFields;
-  console.log(task, operator);
 
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
   };
 
-  const handleSubmit = () => console.log("hello");
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const id = 101;
+    const user_id = 98;
+
+    try {
+      await postActivity(id, user_id, task, operator);
+      resetFormFields();
+      alert("Creata nuova attività");
+    } catch (error) {
+      console.error(error);
+      alert("Attenzione: errore nella creazione della nuova attività");
+    }
+  };
 
   const handleChange = (event) => {
     const { name, value } = event.target;
