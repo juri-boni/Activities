@@ -1,5 +1,5 @@
 import { createContext, useState, useEffect } from "react";
-import { getActivities } from "../utils/requests";
+import { getActivities, getUsers } from "../utils/requests";
 
 export const ActivitiesContext = createContext({
   activities: [],

@@ -1,29 +1,38 @@
-import { useState, Fragment } from "react";
+import { useState, useContext, Fragment } from "react";
+import { ActivitiesContext } from "../../context/activities.context";
 import FormInput from "../form-input/form-input.component";
 import Button from "../button/button.component";
 import "./new-activities-form.styles.scss";
-import { postActivity } from "../../utils/requests";
+import { postActivity, getActivities } from "../../utils/requests";
 
 const defaultFormFields = {
   task: "",
-  operator: "",
+  name: "",
 };
 
 const NewActivitiesForm = () => {
+  const { activities, setActivities } = useContext(ActivitiesContext);
   const [formFields, setFormFields] = useState(defaultFormFields);
-  const { task, operator } = formFields;
+  const { task, name } = formFields;
 
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
   };
 
+  const fetchActivities = async () => {
+    const activities = await getActivities();
+    setActivities(activities);
+  };
+
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const id = 101;
-    const user_id = 98;
+    const id = activities.length + 1;
+    const user_id = 11;
+    const operator = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
 
     try {
       await postActivity(id, user_id, task, operator);
+      await fetchActivities();
       resetFormFields();
       alert("Creata nuova attività");
     } catch (error) {
@@ -56,8 +65,8 @@ const NewActivitiesForm = () => {
               type="text"
               required
               onChange={handleChange}
-              name="operator"
-              value={operator}
+              name="name"
+              value={name}
             ></FormInput>
           </div>
           <div className="new-activities-buttons-container">
