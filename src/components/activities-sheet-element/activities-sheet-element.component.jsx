@@ -1,9 +1,8 @@
 import { useContext } from "react";
-
-import Button from "../button/button.component";
+import { ActivitiesContext } from "../../context/activities.context";
 import { getActivities, updateActivity } from "../../utils/requests";
 import "./activities-sheet-element.styles.scss";
-import { ActivitiesContext } from "../../context/activities.context";
+import Button from "../button/button.component";
 
 const ActivitiesSheetElement = ({ todo }) => {
   const { id, user_id, task, operator, done } = todo;
@@ -20,7 +19,7 @@ const ActivitiesSheetElement = ({ todo }) => {
   };
 
   return (
-    <div className={`sheet-element ${id % 2 === 0 ? "transparent" : "normal"}`}>
+    <div className="sheet-element">
       <div className="sheet-element_info">
         <span className="sheet-element_operator">{operator}</span>
         <span className="sheet-element_task">{task}</span>
