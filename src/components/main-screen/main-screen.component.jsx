@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { ActivitiesContext } from "../../context/activities.context";
 
@@ -11,10 +11,30 @@ import "./main-screen.styles.scss";
 const MainScreen = () => {
   const location = useLocation();
   const { activities } = useContext(ActivitiesContext);
+  const [searchField, setSearchField] = useState("");
+  const [filteredActivities, setFilteredActivities] = useState(activities);
 
-  const todos = activities?.filter((activity) => activity.done === false);
+  console.log(filteredActivities);
 
-  const completes = activities?.filter((activity) => activity.done === true);
+  useEffect(() => {
+    const newFilteredActivities = activities.filter((activity) => {
+      return activity.operator.toLowerCase().includes(searchField);
+    });
+    setFilteredActivities(newFilteredActivities);
+  }, [activities, searchField]);
+
+  const onSearchChange = (event) => {
+    const searchFieldString = event.target.value.toLowerCase();
+    setSearchField(searchFieldString);
+  };
+
+  const todos = filteredActivities?.filter(
+    (activity) => activity.done === false
+  );
+
+  const completes = filteredActivities?.filter(
+    (activity) => activity.done === true
+  );
 
   return (
     <div className="main-screen-container">
@@ -27,7 +47,10 @@ const MainScreen = () => {
       )}
       <div className="searchbox-container">
         {location.pathname !== "/" && (
-          <SearchBox placeholder="Filtra per operatore" />
+          <SearchBox
+            placeholder="Filtra per operatore"
+            onChangeHandler={onSearchChange}
+          />
         )}
       </div>
       {location.pathname === "/todos" && <Activities todos={todos} />}
