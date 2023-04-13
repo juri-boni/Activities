@@ -8,5 +8,11 @@
 
   .admin-container {
     margin-right: 2rem;
+    display: flex;
+    flex-direction: column;
+
+    span {
+      align-self: flex-end;
+    }
   }
 }

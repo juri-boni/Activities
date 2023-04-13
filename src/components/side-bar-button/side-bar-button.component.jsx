@@ -20,7 +20,10 @@ const SideBarButton = ({ children, path }) => {
       <div
         className={`active-bar ${location.pathname === path && "redbar"}`}
       ></div>
-      <Link to={path} className="side-bar-button">
+      <Link
+        to={path}
+        className={`side-bar-button ${location.pathname === path && "active"} `}
+      >
         {children}
       </Link>
     </div>
