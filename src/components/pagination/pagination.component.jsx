@@ -34,7 +34,13 @@ const Pagination = ({ todosPages, historyPage }) => {
         </div>
 
         <div className="page-number-container">
-          <span className="page-number">Page {currentPage}</span>
+          <span className="page-number">
+            {`
+            ${currentPage} /
+            ${location.pathname === "/todos" ? todosPages : historyPage}
+          
+          `}
+          </span>
         </div>
         <div className="arrow-container">
           {location.pathname === "/todos" && currentPage < todosPages && (
