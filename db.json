@@ -391,20 +391,6 @@
       "task": "Write the damn resolver!",
       "operator": "Susie",
       "done": false
-    },
-    {
-      "id": 51,
-      "user_id": 4,
-      "task": "Nuova attività",
-      "operator": "Ella",
-      "done": false
-    },
-    {
-      "id": 52,
-      "user_id": 11,
-      "task": "Nuova attività",
-      "operator": "John",
-      "done": false
     }
   ]
 }
