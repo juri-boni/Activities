@@ -10,7 +10,7 @@ import "./main-screen.styles.scss";
 
 const MainScreen = () => {
   const location = useLocation();
-  const { activities } = useContext(ActivitiesContext);
+  const { activities, setCurrentPage } = useContext(ActivitiesContext);
   const [searchField, setSearchField] = useState("");
   const [filteredActivities, setFilteredActivities] = useState(activities);
 
@@ -21,6 +21,7 @@ const MainScreen = () => {
       return activity.operator.toLowerCase().includes(searchField);
     });
     setFilteredActivities(newFilteredActivities);
+    setCurrentPage(1);
   }, [activities, searchField]);
 
   const onSearchChange = (event) => {
